@@ -157,7 +157,7 @@ def enhancedPacmanFeatures(state, action):
     capsules = state.getCapsules()
     if capsules:
         closestCapsule = min(map(lambda x: util.manhattanDistance(position, x), capsules))
-        features[ 'closestCapsule' ] = 1.0 / closestCapsule
+        features[ 'capsule_agent' ] = 1.0 / closestCapsule
     return features
 
 
